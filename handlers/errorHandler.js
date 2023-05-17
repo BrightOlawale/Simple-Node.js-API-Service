@@ -1,3 +1,5 @@
+// Description: Function  to handle response error
+
 const handleError = (res, response, endpointURL, option) => {
     if (!response.data){
         res.status(500)
