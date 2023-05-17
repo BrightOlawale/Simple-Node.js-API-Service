@@ -28,8 +28,8 @@ To start the Node.js service, run the following command:
 npm start
 ```
 The server will start running on the specified port (default: 3000). You can access the API endpoints using the following URLs:
-> GET `/api/comments`: Retrieves comments from the `jsonplaceholder.typicode.com/comments `API.
-> GET `/api/posts`: Retrieves posts from the `jsonplaceholder.typicode.com/comments` API.
+> * GET `/api/comments` : Retrieves comments from the `jsonplaceholder.typicode.com/comments ` API.
+> * GET `/api/posts` : Retrieves posts from the `jsonplaceholder.typicode.com/comments` API.
 
 Both endpoints accept an optional limit query parameter to limit the number of items returned. For example:
 >  `/api/comments?limit=9` will return only 9 comments.
