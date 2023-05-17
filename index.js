@@ -16,6 +16,7 @@ app.get('/api/posts', handlers.getPost);
 // Middleware to handle error;
 app.use(errorHandler);
 
+// Start App, display PROMPT in purple
 app.listen(process.env.PORT, ()=> {
     console.log('\x1b[35m%s\x1b[0m', `SERVER: SERVER Running on PORT ${process.env.PORT}`);
 })
