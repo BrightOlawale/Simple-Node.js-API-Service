@@ -1,3 +1,5 @@
+// Description: Main server file
+
 const express = require('express');
 const dotenv = require('dotenv').config()
 const handlers = require('./handlers/allHandler');
