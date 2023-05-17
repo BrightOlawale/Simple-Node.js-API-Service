@@ -32,7 +32,7 @@ The server will start running on the specified port (default: 3000). You can acc
 > * GET `/api/posts` : Retrieves posts from the `jsonplaceholder.typicode.com/comments` API.
 
 Both endpoints accept an optional limit query parameter to limit the number of items returned. For example:
->  `/api/comments?limit=9` will return only 9 comments.
+>  * `/api/comments?limit=9` will return only 9 comments.
 
 ## Error Handling
 The service includes error handling using a custom error middleware. Any errors that occur during the API requests will be properly handled and returned as JSON responses with appropriate error messages.
