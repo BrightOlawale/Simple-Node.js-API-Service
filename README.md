@@ -5,7 +5,7 @@ This is a simple Node.js service that provides two API endpoints: /api/comments 
 ## Installation
 1. Clone the repository:
     ```shell
-    git clone https://github.com/your-username/sample-nodejs-api.git
+    git clone https://github.com/BrightOlawale/Simple-Node.js-API-Service.git
     ```
 
 2. Install dependencies:
