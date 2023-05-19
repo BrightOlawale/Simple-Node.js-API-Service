@@ -14,10 +14,16 @@ const endpointURL = `https://jsonplaceholder.typicode.com`;
 // Function to get comments
 handlers.getComment = asyncHandler( async(req, res) => {
     // Check if limit query is passed
-    const limit = req.query.limit ? parseInt(req.query.limit) : 10;
-    // Retrieve comments endpoint using the parsed limit
-    const commentsUrl = `${endpointURL}/comments?_limit=${limit}`;
+    const limit = req.query.limit ? parseInt(req.query.limit) : false;
+    let commentsUrl = '';
 
+    // Retrieve comments endpoint using the parsed limit
+    if (limit){
+        commentsUrl = `${endpointURL}/comments?_limit=${limit}`;
+    } else{
+        commentsUrl = `${endpointURL}/comments`;
+    }
+    
     // Use axios to feth the data
     const response = await axios.get(commentsUrl);
 
@@ -30,10 +36,15 @@ handlers.getComment = asyncHandler( async(req, res) => {
 // Function to get posts
 handlers.getPost = asyncHandler(async (req, res) => {
     // Check if limit query is passed
-    const limit = req.query.limit ? parseInt(req.query.limit) : 10;
+    const limit = req.query.limit ? parseInt(req.query.limit) : false;
+    let postsUrl = '';
 
     // Retrieve posts endpoint using the parsed limit
-    const postsUrl = `${endpointURL}/posts?_limit=${limit}`;
+    if (limit){
+        postsUrl = `${endpointURL}/posts?_limit=${limit}`;
+    } else{
+        postsUrl = `${endpointURL}/posts`;
+    }
 
     // Fetch the data using axios
     const response = await axios.get(postsUrl);
